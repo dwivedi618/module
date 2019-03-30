@@ -1,0 +1,43 @@
+ <mat-card class="example-card center">
+ <div class="logo">QBase</div>
+ 
+        
+        <div class="hcenter ">
+           <div class="container margin-bottom">
+              <h1 class="text text_16px hcenter"><span>Sign</span> In</h1>
+              <h2 class="text text_12px hcenter">with your QBase account</h2>
+           </div>
+        <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          
+
+               
+<!-- email input fiels -->
+            <mat-form-field  class="example-full-width ">
+            <input type="email"  matInput placeholder="Email or Phone" ngModel name="email">
+            </mat-form-field>
+            <!-- --------------------------------- -->
+
+            <!-- password input fiels -->
+            <mat-form-field class="example-full-width ">
+                <input matInput placeholder="Password" ngModel name="password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <input type="password"  matInput placeholder="Password" ngModel name="password">   
+              </mat-form-field>
+              <!-- ---------------------- -->
+            <div class="container margin-bottom">
+              <a  href="">Forgot password?</a>
+              
+
+            </div>
+
+           
+              <button type="submit" mat-raised-button class="btn btn-primary">Sign In</button>
+            
+                
+               
+        </form>
+      </div>
+      </mat-card >
+   
