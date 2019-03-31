@@ -1,0 +1,46 @@
+.mat-card-nav{
+    position: relative;
+    display: flex;
+    
+    width: 100%;
+    height: 10vh;
+    
+    box-shadow: 0rem .1rem .2rem grey;
+    border-radius: 0%;
+
+}
+.mat-card-avatar {
+    
+   
+    background-size: cover;
+    
+  }
+  .nav-right{
+      position:absolute;
+      display: block;
+      float: right !important;
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

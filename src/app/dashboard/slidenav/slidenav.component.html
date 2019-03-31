@@ -1,3 +1,60 @@
-<p>
-  slidenav works!
-</p>
+
+<mat-sidenav-container class="example-container">
+  <!-- sidenav -->
+    
+    <mat-sidenav #sidenav mode="side"  [(opened)]="opened">QBase
+    
+  </mat-sidenav>
+  <!-- ------------ -->
+    <mat-sidenav-content>
+      <!-- tool bar upper navigation -->
+          
+          <mat-card class="mat-card-nav">
+              <div>
+                <!-- button form sidenav open and close --> 
+                  <button mat-button (click)="sidenav.toggle()"><i class="material-icons">
+                      menu
+                      </i></button>
+                     
+                <!-- ---------------------------------- -->
+              </div>
+
+                <div >
+                <!-- button for search -->
+                
+                
+
+              <button mat-button [matMenuTriggerFor]="search"><i class="material-icons">search</i></button>
+                <!-- -------------------------- -->
+                <!-- button for notification -->
+                <button mat-button [matMenuTriggerFor]="notification">
+                  <i class="material-icons"> notification_important</i>
+                </button>
+                <!-- -------------------------------- -->
+                <!-- button for acoount navigation -->
+              <button mat-button [matMenuTriggerFor]="account">
+                <i class="material-icons">account_circle</i><span>Gragon Fire</span>
+              </button>
+            <mat-menu #account="matMenu">
+                <button mat-menu-item><a [routerLink]="[ './login']">login</a></button>
+              <button mat-menu-item>settings</button>
+            </mat-menu>
+            <!-- ------------------------------- -->
+          </div>
+          <button mat-button><a [routerLink]="[ './question']">show question</a></button>
+            
+            
+            
+            
+              
+            
+            </mat-card>
+      <!-- ----------------------------- -->
+      
+      
+      <router-outlet>
+        
+      </router-outlet>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>

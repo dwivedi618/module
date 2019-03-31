@@ -15,11 +15,14 @@ import { ServiceLoginComponent } from './service-login/service-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './dashboard/navigation/navigation.component';
 import { SlidenavComponent } from './dashboard/slidenav/slidenav.component';
+import { QuestionComponent } from './question/question.component';
 
 
 
 const appRoutes:Routes = [
+  { path: '' , component : DashboardComponent },
   { path: 'login' , component : ServiceLoginComponent },
+  { path: 'question', component : QuestionComponent },
 ];
 
 @NgModule({
@@ -28,7 +31,8 @@ const appRoutes:Routes = [
     ServiceLoginComponent,
     DashboardComponent,
     NavigationComponent,
-    SlidenavComponent
+    SlidenavComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
