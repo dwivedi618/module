@@ -8,6 +8,7 @@ import {  Routes, RouterModule } from '@angular/router';
 
 
 import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './dashboard/navigation/navigation.component';
 import { SlidenavComponent } from './dashboard/slidenav/slidenav.component';
 import { QuestionComponent } from './question/question.component';
+import { AvatarComponent } from './dashboard/avatar/avatar.component';
 
 
 
@@ -32,13 +34,15 @@ const appRoutes:Routes = [
     DashboardComponent,
     NavigationComponent,
     SlidenavComponent,
-    QuestionComponent
+    QuestionComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    FlexLayoutModule,
    
     
     

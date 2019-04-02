@@ -1,56 +1,91 @@
 
 <mat-sidenav-container class="example-container">
+  
   <!-- sidenav -->
     
-    <mat-sidenav #sidenav mode="side"  [(opened)]="opened">QBase
-    
-  </mat-sidenav>
+    <mat-sidenav #sidenav mode="side"  [(opened)]="opened"
+      
+      fxLayout="column" 
+      fxLayoutAlign="start" >
+      <div>QBase</div>
+      <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name and age
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <mat-form-field>
+                <input matInput placeholder="First name">
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input matInput placeholder="Age">
+              </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-sidenav>
   <!-- ------------ -->
     <mat-sidenav-content>
-      <!-- tool bar upper navigation -->
-          
-          <mat-card class="mat-card-nav">
-              <div>
+        <mat-card class="mat-card-nav">
+            <div class="topnav">
+              <div topnav-left>
                 <!-- button form sidenav open and close --> 
-                  <button mat-button (click)="sidenav.toggle()"><i class="material-icons">
-                      menu
-                      </i></button>
-                     
+                  <button mat-button (click)="sidenav.toggle()">
+                    <i class="material-icons"> menu</i>
+                  </button>     
                 <!-- ---------------------------------- -->
-              </div>
-
-                <div >
+              </div> 
+              
                 <!-- button for search -->
-                
-                
-
-              <button mat-button [matMenuTriggerFor]="search"><i class="material-icons">search</i></button>
+              <div class="topnav-right" fxFlex fxLayout="row" fxLayoutAlign="end ">
+              <button mat-button 
+                      matTooltip="Search" >
+                      <i class="material-icons">search</i>
+              </button>
                 <!-- -------------------------- -->
                 <!-- button for notification -->
-                <button mat-button [matMenuTriggerFor]="notification">
+                <button mat-button [matMenuTriggerFor]="notification" 
+                   matBadge="8"
+                   matBadgeColor="accent"
+                   matTooltip="Notifications">
                   <i class="material-icons"> notification_important</i>
                 </button>
+                <mat-menu #notification="matMenu">
+                  <button mat-menu-item>
+                    <a [routerLink]="[ '/notification', routeParam ]">
+                      <app-avatar></app-avatar> <span>new question uploaded</span>
+                    </a> 
+                </button>
+                </mat-menu>
                 <!-- -------------------------------- -->
                 <!-- button for acoount navigation -->
               <button mat-button [matMenuTriggerFor]="account">
-                <i class="material-icons">account_circle</i><span>Gragon Fire</span>
+                <!-- avatar module inserted -->
+                    <app-avatar></app-avatar><span>  wolverine</span>
+                <!-- ---------------- -->
               </button>
             <mat-menu #account="matMenu">
                 <button mat-menu-item><a [routerLink]="[ './login']">login</a></button>
-              <button mat-menu-item>settings</button>
+                <button mat-menu-item><a [routerLink]="[ './question']">Show Question</a></button>
+
+                <button mat-menu-item>settings</button>
             </mat-menu>
             <!-- ------------------------------- -->
           </div>
-          <button mat-button><a [routerLink]="[ './question']">show question</a></button>
-            
-            
-            
-            
-              
-            
-            </mat-card>
+        </div>
+             
+          </mat-card>
       <!-- ----------------------------- -->
       
+          
+          
       
       <router-outlet>
         

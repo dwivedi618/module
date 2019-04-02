@@ -13,8 +13,8 @@
     border: 1px solid #555;
   }
   .mat-card-nav{
-    position: relative;
-    display: flex;
+    
+    padding-right: .2rem;
     
     width: 100%;
     height: 10vh;
@@ -23,7 +23,19 @@
     border-radius: 0%;
 
 }
+.topnav {
+    
+}
+.topnav-left{
+    float: left;
+    display: inline-block;
+}
+.topnav-right {
+    width: 100%;
 
+    float: right;
+    display: inline-block;
+  }
 
   .material-icons {
     font-family: 'Material Icons';
@@ -52,4 +64,16 @@
   mat-sidenav{
       
     width: 25rem;
+  }
+  @media only screen and (max-width: 320px) {
+    mat-sidenav{
+      
+        width: 70vw;
+      }
+  }
+  @media only screen and (max-width: 420px) {
+    mat-sidenav{
+      
+        width: 70vw;
+      }
   }
