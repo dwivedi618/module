@@ -18,6 +18,9 @@ import { NavigationComponent } from './dashboard/navigation/navigation.component
 import { SlidenavComponent } from './dashboard/slidenav/slidenav.component';
 import { QuestionComponent } from './question/question.component';
 import { AvatarComponent } from './dashboard/avatar/avatar.component';
+import { SlidenavListComponent } from './dashboard/slidenav/slidenav-list/slidenav-list.component';
+import { PreloaderComponent } from './preloader/preloader.component';
+import { SearchComponent } from './dashboard/navigation/search/search.component';
 
 
 
@@ -25,6 +28,8 @@ const appRoutes:Routes = [
   { path: '' , component : DashboardComponent },
   { path: 'login' , component : ServiceLoginComponent },
   { path: 'question', component : QuestionComponent },
+  { path: 'preloader', component : PreloaderComponent },
+
 ];
 
 @NgModule({
@@ -35,7 +40,10 @@ const appRoutes:Routes = [
     NavigationComponent,
     SlidenavComponent,
     QuestionComponent,
-    AvatarComponent
+    AvatarComponent,
+    SlidenavListComponent,
+    PreloaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

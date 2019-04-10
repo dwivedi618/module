@@ -1,3 +1,20 @@
+.c1{
+background: #ff0000;
+}
+.c2{
+  background: #fc34d0;
+  }
+  .c3{
+    background: #3700ff;
+    }
+    .c3{
+      background: rgb(0, 255, 13);
+      }
+      .c4{
+        background: #ffd900;
+        }
+
+        
 .mat-card-question-container{
     
     max-width: 96%;

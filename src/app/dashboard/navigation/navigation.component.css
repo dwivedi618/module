@@ -1,46 +1,98 @@
-.mat-card-nav{
-    position: relative;
-    display: flex;
-    
-    width: 100%;
-    height: 10vh;
-    
-    box-shadow: 0rem .1rem .2rem grey;
-    border-radius: 0%;
+span{
+  display:inline-block;
+  line-height: normal;
+  
+
+  margin-left: .5rem;
 
 }
-.mat-card-avatar {
-    
-   
-    background-size: cover;
-    
-  }
-  .nav-right{
-      position:absolute;
-      display: block;
-      float: right !important;
-  }
-  .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 32px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+
+.username-email-container{
+  padding: 1rem 0rem 1rem 0rem;
+}
+.username{
+  position: relative;
+  display: block;
+  color: #222222;
+  font-size: 1.2rem;
+  font-weight: bold !important;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+.email{
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: #666666;
+  margin-top: .02rem;
+  line-height: normal;
+}
+.mat-card-nav{  
+  position: relative;
   
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
+    width: 100%;
+    height: 10vh;   
+    box-shadow: 0rem .01rem .1rem grey;
+    border-radius: 0%;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+.topnav{
+  width: 100%;
+  position: relative;
   
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
+}
+button a{
+  text-decoration: none;
+  color: black;
+}
+button:active,button:visited,button:focus{
+  outline: none;
+  border: none;
+}
+
+button i{
+  text-align: center;
+  vertical-align: center;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.mat-menu-account{
+  position: relative;
+  width: auto;
+  padding: 1rem;
+
+}
+#mini-profile-container{
+  width: 40vw;
+  height: auto;
+  padding: .5rem;
+  display: block;
+}
+mat-menu-item .account{
+  position: relative;
+}
+.avatar-big{
+  width: 5rem;
+  height: 5rem;
+  vertical-align: middle;
+}
+mat-menu-content{
+  width: 20rem;
+  height: auto;
+}
