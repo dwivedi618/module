@@ -1,3 +1,10 @@
+mat-toolbar{
+  background-color: white;
+  box-shadow: 
+#0000001a 0px 2px 1px -1px, 
+#0000000a 0px 1px 1px 0px,
+#00000013 0px 1px 3px 0px;
+}
 span{
   display:inline-block;
   line-height: normal;
@@ -28,21 +35,7 @@ span{
   margin-top: .02rem;
   line-height: normal;
 }
-.mat-card-nav{  
-  position: relative;
-  
-    width: 100%;
-    height: 10vh;   
-    box-shadow: 0rem .01rem .1rem grey;
-    border-radius: 0%;
-    margin-bottom: 2rem;
-    padding-right: 2rem;
-}
-.topnav{
-  width: 100%;
-  position: relative;
-  
-}
+
 button a{
   text-decoration: none;
   color: black;

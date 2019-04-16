@@ -9,7 +9,13 @@ html,body{
 }
 body{
     margin: 0%;
+    
 } 
+div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .material-icons {
     font-family: 'Material Icons';
@@ -17,7 +23,7 @@ body{
     font-style: normal;
     font-size: 32px;  /* Preferred icon size */
     display: inline-block;
-    line-height: 1;
+    line-height: normal;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;

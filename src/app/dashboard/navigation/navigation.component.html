@@ -1,38 +1,43 @@
-<mat-card class="mat-card-nav" fxLayout="row">
-    <div class="topnav">
-      <div topnav-left>
+<mat-toolbar >
+  
+
+   <!-- <div class="topnav"> -->
+      <div class="topnav-left">
         <!-- button form sidenav open and close --> 
-          <button mat-button (click)="onToggleSidenav()">
-            <i class="material-icons"> menu</i>
+          <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
           </button>     
         <!-- ---------------------------------- -->
       </div> 
       
         
-      <div class="topnav-right" fxFlex fxLayout fxLayoutAlign="flex-end">
+      <div class="topnav-right" fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="10px">
       
         <app-search></app-search>
+      
         <!-- button for notification -->
-        <button mat-button [matMenuTriggerFor]="notification" 
-   
-           matTooltip="Notifications">
-           
-          <mat-icon matBadge="8" matBadgeColor="accent"> notifications
-
-          </mat-icon>
-        </button>
-        <mat-menu #notification="matMenu">
-          <button mat-menu-item>
-            <a [routerLink]="[ '/notification', routeParam ]">
-              <app-avatar></app-avatar> <span>new question uploaded</span>
-            </a> 
-        </button>
-        </mat-menu>
+        
+            <button mat-icon-button [matMenuTriggerFor]="notification" 
+                    matTooltip="Notifications">
+              
+                  <mat-icon matBadge="8"
+                        matBadgeColor="accent"> notifications
+                  </mat-icon>
+            </button>
+                  <mat-menu #notification="matMenu">
+                    <button mat-menu-item>
+                      <a [routerLink]="[ '/notification', routeParam ]">
+                          <app-avatar></app-avatar>
+                          <span>new question uploaded</span>
+                      </a> 
+                    </button>
+                  </mat-menu>
+        
         <!-- -------------------------------- -->
 
 
         <!-- button for acoount navigation -->
-      <button mat-button [matMenuTriggerFor]="account">
+      <button mat-icon-button [matMenuTriggerFor]="account">
         <!-- avatar module inserted -->
             <app-avatar></app-avatar>
         <!-- ---------------- -->
@@ -91,7 +96,5 @@
     <!-- dropdown menu ends here -->
     <!-- ------------------------------- -->
   </div>
-</div>
-     
-  </mat-card>
+</mat-toolbar>
 <!-- ----------------------------- -->
