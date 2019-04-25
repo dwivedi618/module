@@ -1,10 +1,22 @@
+   
+   <app-navigation (sidenavToggle)="sidenav.toggle()">
+
+   </app-navigation>
+
+
 
 <mat-sidenav-container class="example-container">
   
   <!-- sidenav -->
-    
-    <mat-sidenav #sidenav mode="side"  [(opened)]="opened">
 
+  <!-- for mobile devices mode="over" and other mode="side" -->
+    
+    <mat-sidenav 
+    #sidenav 
+    [mode]="isLargeScreen() ? 'side' : 'over'" [opened]="isLargeScreen()"
+     >
+
+      <!-- options inside the sidenav -->
       <app-slidenav-list></app-slidenav-list>
 
     </mat-sidenav>
@@ -15,12 +27,13 @@
   <!-- ------------ -->
     <mat-sidenav-content>
 
-    <app-navigation (sidenavToggle)="sidenav.toggle()"></app-navigation>
+
       
           
-     
+     <!-- the main content injected in router-outlet -->
     <main>  
       <router-outlet>
+        
         
       </router-outlet>
     </main>

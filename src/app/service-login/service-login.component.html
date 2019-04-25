@@ -1,42 +1,60 @@
- <mat-card class="example-card center">
- <div class="logo">QBase</div>
+  <mat-card class="login-card center" fxLayout="column" fxLayoutAlign="center center">
+
+    <!-- logo will be inserted in this div -->
+    <div class="logo" fxLayoutAlign="center">
+      <img src="../assets/qbase48.png" alt="qbase">
+    </div>
  
         
         <div class="hcenter ">
-           <div class="container margin-bottom">
+           <div class=" container margin-bottom">
               <h1 class="text text_16px hcenter"><span>Sign</span> In</h1>
               <h2 class="text text_12px hcenter">with your QBase account</h2>
            </div>
-        <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+        <!-- form for login -->
+        <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">      
+            <!-- email input field -->
+            <mat-form-field  class="example-full-width ">
+               <input type="email"  matInput placeholder="Email or Phone" ngModel name="email">
+            </mat-form-field>
           
 
-               
-<!-- email input fiels -->
-            <mat-form-field  class="example-full-width ">
-            <input type="email"  matInput placeholder="Email or Phone" ngModel name="email">
-            </mat-form-field>
-            <!-- --------------------------------- -->
-
-            <!-- password input fiels -->
+          <!-- password input field -->
             <mat-form-field class="example-full-width ">
                 <input matInput placeholder="Password" ngModel name="password" [type]="hide ? 'password' : 'text'">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
-                <input type="password"  matInput placeholder="Password" ngModel name="password">   
-              </mat-form-field>
+            </mat-form-field>
               <!-- ---------------------- -->
-            <div class="container margin-bottom">
+            <div class="container margin-bottom" fxLayoutGap="10px" fxLayout.xs="column" >
+
+              <!-- impliment the the password recovery system -->
               <a  href="">Forgot password?</a>
+              <button type="submit" mat-raised-button class="btn btn-primary">Sign In</button>
+
+
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+              <a href=""><span>create an account</span></a>
               
 
             </div>
 
-           
-              <button type="submit" mat-raised-button class="btn btn-primary">Sign In</button>
+            <!-- horontal line -->
+            <hr><span>OR</span><hr>
+            <!-- --------------------- -->
             
-                
-               
+              
+            <!-- api login button -->
+              <button mat-button>
+                login with google
+              </button>
+              <button mat-button>
+                  login with facebook
+              </button> 
+            <!---------------------->
         </form>
       </div>
       </mat-card >

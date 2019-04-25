@@ -1,9 +1,12 @@
-<div class="container" fxLayout="row"  fxFlexAlign="center">
-<form action="#" method="POST" name="search">
+<div class="container" fxLayout="row"  fxFlexAlign="center" fxHide.xs="true">
+<form action="#" method="POST" name="search" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          
             <div class="field-input" fxFlex>
-              <input type="text" placeholder="Search..." name="keyword">
-              
+                
+              <input type="search" placeholder="Search..." name="keyword">
+            
             </div>
+          
             <div class="search-button" fxFlex fxLayoutAlign="end">
                 <button mat-icon-button type="submit">
                     <mat-icon>search</mat-icon>

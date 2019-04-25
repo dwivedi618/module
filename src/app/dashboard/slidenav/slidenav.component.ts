@@ -11,6 +11,14 @@ export class SlidenavComponent implements OnInit {
 
   ngOnInit() {
   }
+  isLargeScreen() {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (width > 720) {
+        return true;
+    } else {
+        return false;
+    }
+  }
   
 
 }

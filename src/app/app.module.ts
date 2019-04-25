@@ -21,6 +21,7 @@ import { AvatarComponent } from './dashboard/avatar/avatar.component';
 import { SlidenavListComponent } from './dashboard/slidenav/slidenav-list/slidenav-list.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { SearchComponent } from './dashboard/navigation/search/search.component';
+import { PandoraBoxComponent } from './pandora-box/pandora-box.component';
 
 
 
@@ -43,7 +44,8 @@ const appRoutes:Routes = [
     AvatarComponent,
     SlidenavListComponent,
     PreloaderComponent,
-    SearchComponent
+    SearchComponent,
+    PandoraBoxComponent
   ],
   imports: [
     BrowserModule,

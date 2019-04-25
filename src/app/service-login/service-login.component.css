@@ -1,12 +1,4 @@
-.box{
-  position: relative;
-  max-width: 50rem;
-  text-align: center;
-  border: .05rem solid #202124;
-  border-radius: .4rem;
-  padding: .5 rem;
-  
-}
+
 .center{
   position: absolute;
   top: 50%;
@@ -15,13 +7,11 @@
   
 
 }
-
-
 .text{
   color: #202124;
 }
 .text_16px{
-
+  font: "30px Roboto"; 
   font-size: 1.6rem;
   
 }
@@ -71,15 +61,36 @@ input.example-right-align::-webkit-inner-spin-button {
 input.example-right-align {
   -moz-appearance: textfield;
 }
-.example-card {
+.login-card {
+  position: absolute;
   max-width: 100%;
-  max-height: 90vh;
+  height: auto;
   padding: 4rem;
 
 }
+@media only screen and (max-width: 420px) {
+  .login-card{
+    width: 100%;
+    max-height: auto;
+    padding: 1rem;
+    
+    
+      
+    }
+    .text_16px{
+
+      font-size: 1.3rem;
+      
+    }
+    .text_12px{
+      font-size: .9rem;
+    
+    }
+    
+}
 span{
-  color: #ff8c35;
-  text-shadow:  0px 1px 2px#202124;
+  color: #FF370F;
+  text-shadow:  0px 1px 2px 2px#202124;
 }
 .test{
   

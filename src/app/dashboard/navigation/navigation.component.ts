@@ -1,4 +1,4 @@
-import { Component, OnInit ,EventEmitter , Output} from '@angular/core';
+import { Component, OnInit ,EventEmitter , Output , Input} from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,14 +6,24 @@ import { Component, OnInit ,EventEmitter , Output} from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  @Output() sidenavToggle = new EventEmitter<void>(); 
+  isOpen = true;
+
+  @Output() sidenavToggle = new EventEmitter<void>();
+  
+
+  
 
   constructor() { }
 
   ngOnInit() {
   }
   onToggleSidenav(){
+    this.isOpen = !(this.isOpen);
     this.sidenavToggle.emit();
+    
+    
+    
+
 
   }
 

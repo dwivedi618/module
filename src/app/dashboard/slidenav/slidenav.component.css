@@ -1,69 +1,36 @@
+
 .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+
+.example-sidenav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
+  
+}
+
+
   .example-events {
     width: 300px;
     height: 200px;
     overflow: auto;
     border: 1px solid #555;
   }
-  .mat-card-nav{
-    
-    padding-right: .2rem;
-    
-    width: 100%;
-    height: 10vh;
-    
-    box-shadow: 0rem .1rem .2rem grey;
-    border-radius: 0%;
 
-}
-.topnav {
-    
-}
-.topnav-left{
-    float: left;
-    display: inline-block;
-}
-.topnav-right {
-    width: 100%;
-
-    float: right;
-    display: inline-block;
-  }
-
-  .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 32px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
   mat-sidenav{
       
-    width: 25rem;
+    width: 20rem;
+  }
+  .classbinding{
+   width:10rem; 
   }
   @media only screen and (max-width: 320px) {
     mat-sidenav{

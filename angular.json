@@ -88,7 +88,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/qbase.png",
               "src/assets"
             ]
           }
