@@ -1,17 +1,64 @@
+*{
+  line-height: 24px !important;
+
+}
 .example-header {
   position: fixed;
+  padding: 0;
+  margin: 0;
   top: 0px;
   left: 0;
   width: 100%;
+  height: 3rem;
+
   
-  background-color: white;
+  background-color:#161616;
+
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
   
 
 }
 mat-toolbar{
-  background-color: #666666;
+  height: 3rem;
 
+  
+  
+
+  
+
+}
+
+
+.topnav-left{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #F15500;
+  width: 5rem;
+  left: 0px;
+  text-align: center;
+  
+}
+.selected-option-container{
+  /* position: relative; */
+  display: inline-block;
+  margin-left: 89px;
+}
+.selected-option{
+  color: #ccc;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+.icon-small{
+  font-size: 1rem;
+}
+.icon-small:hover{
+  color: #ccc;
+  transition: .2s all;
+}
+button,mat-icon{
+  line-height: normal !importantd;
 }
 span{
   display:inline-block;
@@ -35,6 +82,10 @@ span{
   padding: 0;
   line-height: normal;
 }
+.session-username{
+  color: #ccc;
+  font-size: .8rem;
+}
 .email{
   display: block;
   padding: 0;
@@ -53,10 +104,6 @@ button:active,button:visited,button:focus{
   border: none;
 }
 
-button i{
-  text-align: center;
-  vertical-align: center;
-}
 .center {
   margin: 0;
   position: absolute;
@@ -115,8 +162,4 @@ overflow: hidden;
 border-radius: 50%;
 line-height: normal;
 position: relative;
-}
-
-.topnav-left{
-  
 }

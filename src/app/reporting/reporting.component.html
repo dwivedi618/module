@@ -1,0 +1,72 @@
+<section class="reprting-container">
+  <div class="reporting-header" fxLayoutAlign="center center">
+      <div fxLayoutAlign="center center">
+        <span class="heading-uppercase">Reporting</span>
+      </div>
+
+     
+    <div fxFlex fxLayout="row"  fxLayout.xs="column"
+        fxLayoutAlign="flex-end" fxLayoutAlign.xs="start start"
+         fxLayoutGap="10px" fxLayoutGap.gt-sm="50px">
+
+      <span fxLayoutAlign="center center" class="info-text">Reporting On :</span>
+
+      <!-- sorting options 1: -->
+
+      <div >
+        <button mat-button [matMenuTriggerFor]="marketingData" class="button-border">
+          marketing Data
+          <mat-icon>arrow_drop_down</mat-icon>
+          
+          
+          
+        </button>
+        <mat-menu #marketingData="matMenu">
+            <button mat-menu-item> Marketing Data</button>
+            <button mat-menu-item> User</button>
+            <button mat-menu-item> Graphic Data</button>
+
+
+        </mat-menu>
+      </div>
+      <!-- ---------------- -->
+
+      <!-- sorting options 2: -->
+      <div class="reporting-option-2">
+          <button mat-button [matMenuTriggerFor]="Locations" class="button-border">
+              Locations
+              <mat-icon>arrow_drop_down</mat-icon>
+
+              
+              
+            </button>
+            <mat-menu #Locations="matMenu">
+                <button mat-menu-item> Marketing Data</button>
+                <button mat-menu-item> User</button>
+                <button mat-menu-item> Graphic Data</button>
+    
+    
+            </mat-menu>
+      </div>
+      <!-- sorting options 3: -->
+      <div class="reporting-option-3">
+          <button mat-button [matMenuTriggerFor]="period" class="button-border">
+              Period
+              
+              <mat-icon>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #period="matMenu">
+                <button mat-menu-item> Week</button>
+                <button mat-menu-item> Month</button>
+                <button mat-menu-item> Year</button>
+    
+    
+            </mat-menu>
+      </div>
+      </div>
+     
+      
+  </div>
+  
+
+</section>

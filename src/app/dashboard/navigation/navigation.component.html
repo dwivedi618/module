@@ -7,22 +7,39 @@
 <mat-toolbar role="heading" class="example-header">
   
 
-      <div class="topnav-left">
+      <div class="topnav-left" fxLayoutAlign="center center"> 
         <!-- button form sidenav open and close --> 
-          <button mat-icon-button (click)="onToggleSidenav()" matTooltip="main menu">
-            <mat-icon>menu</mat-icon>
+          <button mat-icon-button (click)="onToggleSidenav()" matTooltip="main menu" class="center">
+            
+            <mat-icon >menu</mat-icon>
           </button>     
         <!-- ---------------------------------- -->
       </div> 
+
+      <!-- this div contains the selected options or path of items -->
+      <div fxLayoutAlign="center cenetr" class="selected-option-container">
+        <div fxLayoutAlign="center center"> <span class="selected-option">Dashboard</span></div>
+        
+        <div fxLayoutAlign="center center">
+            <button mat-icon-button>
+                <mat-icon class="icon-small">settings</mat-icon>
+              </button>
+         </div>
+          
+          
+        </div>
+        <!-- --------------------- -->
+      
       
         
       <div class="topnav-right" fxFlex fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="10px">
+         
       
-        <app-search ></app-search>
+        <!-- <app-search ></app-search> -->
       
         <!-- button for notification -->
         
-            <button mat-icon-button [matMenuTriggerFor]="notification" 
+            <!-- <button mat-icon-button [matMenuTriggerFor]="notification" 
                     matTooltip="Notifications">
               
                   <mat-icon matBadge="8"
@@ -32,20 +49,27 @@
                   <mat-menu #notification="matMenu">
                     <button mat-menu-item>
                       <a [routerLink]="[ '/notification']">
-                          <app-avatar></app-avatar>
+                          <app-avatar class="avatar-small"></app-avatar>
                           <span>new question uploaded</span>
                       </a> 
                     </button>
-                  </mat-menu>
+                  </mat-menu> -->
         
         <!-- -------------------------------- -->
 
+        <!-- username beside the user icon in naviagtion bar -->
+        <div fxLayoutAlign="center center" fxHide.xs="true">
+        <span class="session-username">Shivam Dwivedi</span>
+        </div>
+
 
         <!-- button for acoount navigation -->
+
       <button mat-icon-button [matMenuTriggerFor]="account">
         <!-- avatar module inserted -->
         <div id="avatar">
-            <app-avatar ></app-avatar>
+
+            <app-avatar class="avatar-small"></app-avatar>
         </div>
         <!-- ---------------- -->
       </button>
@@ -62,8 +86,13 @@
 
                 </div>
                 <div class="username-email-container">
-                  <div class="username"><span>username</span></div>
-                  <div class="email"><span>wolverine@war.com</span></div>
+
+                  <div class="username"><span>Shivam Dwivedi</span></div>
+                  <div class="email"><span>Shivamdwivedi618@gmail.com</span></div>
+                  <a [routerLink]="['/profile']" routerLinkActive="router-link-active">
+                    Account Settings
+                  </a> 
+
                 </div>
               </div>
             </a>

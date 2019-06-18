@@ -1,5 +1,5 @@
    
-   <app-navigation (sidenavToggle)="sidenav.toggle()">
+   <app-navigation (sidenavToggle)="sidenav.toggle();open()">
 
    </app-navigation>
 
@@ -14,7 +14,8 @@
     <mat-sidenav 
     #sidenav 
     [mode]="isLargeScreen() ? 'side' : 'over'" [opened]="isLargeScreen()"
-     >
+    class="sidenav-half-open"
+    >
 
       <!-- options inside the sidenav -->
       <app-slidenav-list></app-slidenav-list>

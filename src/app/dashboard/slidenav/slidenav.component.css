@@ -1,11 +1,14 @@
 
 .example-container {
   position: absolute;
-  top: 60px;
+  top: 3rem;
   bottom: 0px;
   left: 0;
   right: 0;
   z-index: -100;
+  
+  
+
 }
 
 .example-sidenav {
@@ -13,10 +16,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   
   
 }
 
+.example-container::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.example-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.26);
+}
 
   .example-events {
     width: 300px;
@@ -25,11 +36,20 @@
     border: 1px solid #555;
   }
 
-  mat-sidenav{
-      
-    width: 20rem;
+  mat-sidenav{    
+  background-color:#161616;
   }
-  .classbinding{
+  .sidenav-half-open{
+    width: 5rem;
+  
+
+  }
+  .sidenav-half-open:hover{
+    width: 10rem;
+    transition: .2s all;
+
+  }
+  .sidenav-full-open{
    width:10rem; 
   }
   @media only screen and (max-width: 320px) {

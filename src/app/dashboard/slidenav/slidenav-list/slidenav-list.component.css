@@ -1,3 +1,55 @@
 .mat-drawer-inner-container{
-    background-color: #666666 !important;
+    /* background-color: #666666 !important; */
+    background-color: hsl(0, 0%, 90%) !important;
+    color:#ccc !important;
+    /* box-shadow: 10px 10px 10px #fc0101; */
+
+}
+
+.menu{
+    
+    box-sizing: content-box;
+    padding: 1rem;
+    font-size: 12px;
+    border-bottom: .5px solid #2e2e2e;
+    
+    
+    /* box-shadow: inset 0px 0px 1px 0px #757575; */
+    height: auto;
+    
+    
+}
+a{
+    text-decoration: none !important;
+    
+}
+.icon-name{
+    color: #666666;
+    
+   
+}
+.menu:active mat-icon,
+.menu:active .icon-name
+{
+    color: #ccc !important;
+    cursor: pointer;
+    outline: none;
+
+}
+.menu:hover .icon-name,
+.menu:hover mat-icon{
+    color: #ccc;
+    cursor: pointer;
+
+}
+
+.menu:hover{
+    
+    background-color: hsla(0, 0%, 0%, 0.151)!important;
+    border-left: 2px  #f15500;
+    border-left-style:solid;
+    transition: .2s;
+
+
+
 }

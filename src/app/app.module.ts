@@ -22,6 +22,8 @@ import { SlidenavListComponent } from './dashboard/slidenav/slidenav-list/sliden
 import { PreloaderComponent } from './preloader/preloader.component';
 import { SearchComponent } from './dashboard/navigation/search/search.component';
 import { PandoraBoxComponent } from './pandora-box/pandora-box.component';
+import { ReportingComponent } from './reporting/reporting.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -30,6 +32,9 @@ const appRoutes:Routes = [
   { path: 'login' , component : ServiceLoginComponent },
   { path: 'question', component : QuestionComponent },
   { path: 'preloader', component : PreloaderComponent },
+  { path: 'reporting', component : ReportingComponent },
+  { path : 'profile',component : ProfileComponent},
+
 
 ];
 
@@ -45,7 +50,9 @@ const appRoutes:Routes = [
     SlidenavListComponent,
     PreloaderComponent,
     SearchComponent,
-    PandoraBoxComponent
+    PandoraBoxComponent,
+    ReportingComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
