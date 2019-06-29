@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="cube">
     <b class="front">front</b>
     <b class="back">back</b>
@@ -13,8 +13,22 @@
     <i class="left"></i>
     <i class="right"></i>
   </div>
-</div>
+</div> -->
 
-<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<mat-tab-group>
+  <mat-tab label="Login" >
+      
+      <app-login ></app-login>
+  
+  
+  </mat-tab>
 
-<span class="render">3D</span>
+  <mat-tab label="Sign Up">
+    
+    <app-signup ></app-signup>
+    
+   
+  </mat-tab>
+</mat-tab-group>
+
+

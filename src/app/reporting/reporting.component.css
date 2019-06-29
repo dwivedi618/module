@@ -1,3 +1,4 @@
+
 .reporting-container{
     width: 100%;
     height: auto;
@@ -36,3 +37,66 @@
     margin-right: 2rem;
 }
 
+#myChart{
+  
+    
+   
+}
+.mat-chart{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    /* max-height: 60vh; */
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+
+}
+@media (max-width:420px){
+    .mat-chart{
+      width:100%;
+      height: 50vh;
+    }
+    #myChart{
+        width: 100%;
+        height: 50vh;
+        
+    }
+  
+  }
+
+
+
+/* select{
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 8px;
+    border-radius: 4px;
+    overflow: visible;
+}
+select{
+    box-shadow: 0.5px 0.5px 4px #dfdfdf;
+}
+option{
+    border-radius: 4px;
+   
+}
+option:hover{
+    background-color: #ccc;
+} */

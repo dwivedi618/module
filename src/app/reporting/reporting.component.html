@@ -1,72 +1,133 @@
 <section class="reprting-container">
-  <div class="reporting-header" fxLayoutAlign="center center">
-      <div fxLayoutAlign="center center">
-        <span class="heading-uppercase">Reporting</span>
-      </div>
 
-     
-    <div fxFlex fxLayout="row"  fxLayout.xs="column"
-        fxLayoutAlign="flex-end" fxLayoutAlign.xs="start start"
-         fxLayoutGap="10px" fxLayoutGap.gt-sm="50px">
+  <!-- inside reportin header navigation filter button customization button are placed -->
+  <div class="reporting-header"  fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign="center space-between">
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-arround center">
+        <div >
+            <span class="heading-uppercase">Reporting</span>
+        </div>
 
-      <span fxLayoutAlign="center center" class="info-text">Reporting On :</span>
+        <div >
+            <span class="heading-uppercase">Reporting On</span>
+        </div>
 
-      <!-- sorting options 1: -->
+    </div>
 
+    
+
+      
+
+     <!-- default alignment of items row -->
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+      <!-- dropdown options 1: -->
       <div >
         <button mat-button [matMenuTriggerFor]="marketingData" class="button-border">
-          marketing Data
-          <mat-icon>arrow_drop_down</mat-icon>
-          
-          
-          
+                marketing Data
+                <mat-icon>arrow_drop_down</mat-icon>
         </button>
+        <!-- dropdown menu -->
         <mat-menu #marketingData="matMenu">
             <button mat-menu-item> Marketing Data</button>
             <button mat-menu-item> User</button>
             <button mat-menu-item> Graphic Data</button>
-
-
         </mat-menu>
       </div>
       <!-- ---------------- -->
-
-      <!-- sorting options 2: -->
+      <!-- dropdown options 2: -->
       <div class="reporting-option-2">
           <button mat-button [matMenuTriggerFor]="Locations" class="button-border">
-              Locations
-              <mat-icon>arrow_drop_down</mat-icon>
-
-              
-              
-            </button>
+                  Locations
+                  <mat-icon>arrow_drop_down</mat-icon>
+          </button>
             <mat-menu #Locations="matMenu">
                 <button mat-menu-item> Marketing Data</button>
                 <button mat-menu-item> User</button>
                 <button mat-menu-item> Graphic Data</button>
-    
-    
             </mat-menu>
       </div>
-      <!-- sorting options 3: -->
-      <div class="reporting-option-3">
+      
+      <div class="reporting-option-3"><!-- dropdown options 3: -->
           <button mat-button [matMenuTriggerFor]="period" class="button-border">
-              Period
-              
-              <mat-icon>arrow_drop_down</mat-icon>
-            </button>
+                  Period
+                 <mat-icon>arrow_drop_down</mat-icon>
+          </button>
             <mat-menu #period="matMenu">
                 <button mat-menu-item> Week</button>
                 <button mat-menu-item> Month</button>
                 <button mat-menu-item> Year</button>
-    
-    
             </mat-menu>
       </div>
-      </div>
+    </div><!--dropdown options button ends here-->
      
       
-  </div>
+  </div><!-- reporting header ends here -->
+
+
+
+
+
+
+
+<div class="reporing-body">
+  <!-- chart implimentation -->
+  <mat-card class="mat-chart" style="position: relative; ">
+    <div fxLayout="row" fxLayoutAlign="space-between ">
+      
+        <span class="info-text">Users</span>
+
+        <!-- one more button for this user time analysis -->
+        <div fxLayoutAlign="end">
+        <button mat-button [matMenuTriggerFor]="period" class="button-border" >
+          
+            {{chartName}}
+            
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+          <mat-menu #period="matMenu">
+              <!-- <a [routerLink]="['/bar-chart']" routerLinkActive="router-link-active" > -->
+               <button mat-menu-item (click)="loadBarChart()">Bar chart</button>
+              <!-- </a> -->
+                     
+            
+              <button mat-menu-item (click)="loadPieChart()"> Pie chart</button>
+              <button mat-menu-item (click)="loadLineChart()"> Line chart</button>
+  
+  
+          </mat-menu>
+        </div>
+
+    </div>
+    <app-bar-chart *ngIf="barLoaded"></app-bar-chart>
+    <app-line-chart *ngIf="lineLoaded"></app-line-chart>
+    <app-doughnut-chart *ngIf="doughnutLoaded"></app-doughnut-chart>
+    <app-pie-chart *ngIf="pieLoaded"></app-pie-chart>
+    
+      <!-- <canvas id="myChart"  ></canvas> -->
+
+  </mat-card>
+
+
+
+
+  <!-- according to location data -->
+  <section class="location-data">
+    <mat-card class="mat-chart">
+      <span class="info-text">Locations</span>
+      <div fxLayout="row" fxLayoutAlign="end">
+          <button mat-button [matMenuTriggerFor]="Locations" class="button-border">
+                  Locations
+                 <mat-icon>arrow_drop_down</mat-icon>         
+          </button>
+            <mat-menu #Locations="matMenu">
+                <button mat-menu-item> Country</button>
+                <button mat-menu-item> States</button>
+                <button mat-menu-item> District</button>
+            </mat-menu>
+      </div>  
+    </mat-card>
+  </section>
+
+</div> <!-- reporting body ends here -->
   
 
-</section>
+</section><!--reporting container ends here-->

@@ -1,0 +1,90 @@
+<!-- <section fxLayoutAlign="center center" class="login-section "> -->
+    
+
+    <mat-card   class="mat-card-login">
+
+        <div class="logo" fxLayoutAlign="center">
+            <img src="../assets/qbase48.png" alt="qbase">
+          </div>
+<!-- form------------------------------------------------------------- -->
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="login-form" #f="ngForm" (ngSubmit)="onSubmit(f)">      
+          
+          <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px"><!--all input field container-->
+          <!-- email input field -->
+          <div class="input-email">
+            <mat-form-field appearance="outline" class="login-input ">
+              
+               <input type="email"  matInput placeholder="Email " ngModel name="email">
+               <!-- <mat-icon matPreffix>sentiment_very_satisfied</mat-icon> -->
+               <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+          </div>
+
+          <!-- password input field -->
+          <div >
+            <mat-form-field appearance="outline" class="login-input">
+                <input matInput placeholder="Password" ngModel name="password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+          </div>
+              <!-- ---------------------- -->
+             
+          </div><!--all input field ends here-->
+            
+
+              <!-- impliment the the password recovery system -->
+              <div >
+                  <button mat-button>forget password</button>
+              </div>
+
+      <div >
+       <button type="submit" mat-icon-button class="custom-btn btn-black">LOGIN  
+       </button> 
+      </div>  
+
+       
+    
+            <!-- api login button -->
+             <div class="api-login" fxFlex fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+
+
+              <!-- facebook api button -->
+                <div >
+                    <button type="submit" mat-mini-fab class="btn-black">f 
+                    </button> 
+                </div>
+
+                <!-- google api button -->
+                <div >
+                    <button type="submit" mat-mini-fab class=" btn-black">G 
+                    </button> 
+                </div>
+
+                <!-- linkedIn api button -->
+                <div >
+                    <button type="submit" mat-mini-fab class=" btn-black">L 
+                    </button> 
+                </div>
+
+                
+
+             </div>
+
+             <div>
+              <p class="text">By continuing, you agree to Terms of Service, Privacy Policy</p>
+            </div>
+            <!---------------------->
+
+            <!-- new account creation or sign up -->
+            <div fxLayoutAlign="center" >
+              <a [routerLink]="['/signup']" routerLinkActive="router-link-active">
+                <span class="shadow-text">sign up</span>
+              </a> 
+           </div>
+        </form>
+          
+
+      </mat-card>
+<!-- </section> -->

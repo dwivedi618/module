@@ -1,5 +1,6 @@
    
-   <app-navigation (sidenavToggle)="sidenav.toggle();open()">
+  <!-- top most navigation menu -->
+  <app-navigation (sidenavToggle)="sidenav.toggle();open()">
 
    </app-navigation>
 
@@ -9,16 +10,17 @@
   
   <!-- sidenav -->
 
-  <!-- for mobile devices mode="over" and other mode="side" -->
+  <!-- for mobile devices  side nav mode="over" and for  others mode="side" -->
     
     <mat-sidenav 
     #sidenav 
     [mode]="isLargeScreen() ? 'side' : 'over'" [opened]="isLargeScreen()"
-    class="sidenav-half-open"
-    >
+    class="sidenav-half-open" ><!--this class is reposible for sliding style and appearence of side navigaion-->
+    
 
       <!-- options inside the sidenav -->
-      <app-slidenav-list></app-slidenav-list>
+      <app-slidenav-list></app-slidenav-list><!--this will be main option for side navigation-->
+      <!--for now it is fix but dynamically option will change on every side nav option selection-->
 
     </mat-sidenav>
       
@@ -26,14 +28,11 @@
       
     
   <!-- ------------ -->
-    <mat-sidenav-content>
-
-
-      
-          
+    <mat-sidenav-content>      
      <!-- the main content injected in router-outlet -->
     <main>  
       <router-outlet>
+        <!--every singal content other than side navigation will be injected in this section-->
         
         
       </router-outlet>

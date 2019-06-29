@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 
+
+
 import { NgModule } from '@angular/core';
 import {  Routes, RouterModule } from '@angular/router';
-
 
 
 import { MaterialModule } from './material.module';
@@ -24,15 +25,26 @@ import { SearchComponent } from './dashboard/navigation/search/search.component'
 import { PandoraBoxComponent } from './pandora-box/pandora-box.component';
 import { ReportingComponent } from './reporting/reporting.component';
 import { ProfileComponent } from './profile/profile.component';
+import { from } from 'rxjs';
+import { BarChartComponent } from './reporting/bar-chart/bar-chart.component';
+import { PieChartComponent } from './reporting/pie-chart/pie-chart.component';
+import { LineChartComponent } from './reporting/line-chart/line-chart.component';
+import { DoughnutChartComponent } from './reporting/doughnut-chart/doughnut-chart.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
 const appRoutes:Routes = [
   { path: '' , component : DashboardComponent },
-  { path: 'login' , component : ServiceLoginComponent },
+  { path: 'login' , component : LoginComponent },
+  { path: 'signup',component : SignupComponent },
   { path: 'question', component : QuestionComponent },
   { path: 'preloader', component : PreloaderComponent },
   { path: 'reporting', component : ReportingComponent },
+  { path: 'reporting', component : ReportingComponent },
+  { path: 'bar-chart', component : BarChartComponent },
+
   { path : 'profile',component : ProfileComponent},
 
 
@@ -52,7 +64,13 @@ const appRoutes:Routes = [
     SearchComponent,
     PandoraBoxComponent,
     ReportingComponent,
-    ProfileComponent
+    ProfileComponent,
+    BarChartComponent,
+    PieChartComponent,
+    LineChartComponent,
+    DoughnutChartComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
