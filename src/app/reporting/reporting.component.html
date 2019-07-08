@@ -1,66 +1,51 @@
+<section class="new-details">
+    <div fxFlex fxLayout="row" fxLayout.xs="column" 
+    fxLayoutAlign.sm="center center"
+    fxLayoutAlign.xs="space-arround center"
+     fxLayoutGap="1rem" >
+        
+      <div   fxLayout="row" fxLayoutAlign="space-arround center" fxLayoutGap="1rem">
+            <div class="mat-details" fxLayoutAlign="center center">
+              <mat-icon matBadge="618"
+                        matBadgeColor="">people</mat-icon>
+              <span class="heading-uppercase">Total Users</span>
+            </div>
+
+            <div class="mat-details" fxLayoutAlign="center center">
+                <mat-icon matBadge="18">fiber_new_outline</mat-icon>
+                <span class="heading-uppercase">New Users</span>
+            </div>
+      </div> 
+      
+      
+              <div  fxLayout="row" fxLayoutAlign="space-arround center" fxLayoutGap="1rem">
+
+                    <div class="mat-details" fxLayoutAlign="center center">
+                      <mat-icon matBadge="61">whatshot</mat-icon>
+                      <span class="heading-uppercase">Online</span>
+                    </div>
+
+                    <div class="mat-details" fxLayoutAlign="center center">
+                        <mat-icon matBadge="1123">graphic_eq</mat-icon>
+                        <span class="heading-uppercase">Visiters</span>
+                    </div>
+              </div>
+      </div>
+</section>
+<mat-divider></mat-divider>
+
 <section class="reprting-container">
 
+  
+
   <!-- inside reportin header navigation filter button customization button are placed -->
-  <div class="reporting-header"  fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign="center space-between">
-    <div fxFlex fxLayout="row" fxLayoutAlign="space-arround center">
-        <div >
-            <span class="heading-uppercase">Reporting</span>
-        </div>
+  <div class="reporting-header"  fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center space-between">
 
-        <div >
-            <span class="heading-uppercase">Reporting On</span>
-        </div>
-
-    </div>
-
-    
-
-      
-
-     <!-- default alignment of items row -->
-      <div fxLayout="row" fxLayoutAlign="space-between center">
-      <!-- dropdown options 1: -->
-      <div >
-        <button mat-button [matMenuTriggerFor]="marketingData" class="button-border">
-                marketing Data
-                <mat-icon>arrow_drop_down</mat-icon>
-        </button>
-        <!-- dropdown menu -->
-        <mat-menu #marketingData="matMenu">
-            <button mat-menu-item> Marketing Data</button>
-            <button mat-menu-item> User</button>
-            <button mat-menu-item> Graphic Data</button>
-        </mat-menu>
-      </div>
-      <!-- ---------------- -->
-      <!-- dropdown options 2: -->
-      <div class="reporting-option-2">
-          <button mat-button [matMenuTriggerFor]="Locations" class="button-border">
-                  Locations
-                  <mat-icon>arrow_drop_down</mat-icon>
-          </button>
-            <mat-menu #Locations="matMenu">
-                <button mat-menu-item> Marketing Data</button>
-                <button mat-menu-item> User</button>
-                <button mat-menu-item> Graphic Data</button>
-            </mat-menu>
-      </div>
-      
-      <div class="reporting-option-3"><!-- dropdown options 3: -->
-          <button mat-button [matMenuTriggerFor]="period" class="button-border">
-                  Period
-                 <mat-icon>arrow_drop_down</mat-icon>
-          </button>
-            <mat-menu #period="matMenu">
-                <button mat-menu-item> Week</button>
-                <button mat-menu-item> Month</button>
-                <button mat-menu-item> Year</button>
-            </mat-menu>
-      </div>
-    </div><!--dropdown options button ends here-->
      
       
   </div><!-- reporting header ends here -->
+<mat-divider></mat-divider>
+
 
 
 
@@ -70,7 +55,7 @@
 
 <div class="reporing-body">
   <!-- chart implimentation -->
-  <mat-card class="mat-chart" style="position: relative; ">
+  <div class="mat-chart" style="position: relative; ">
     <div fxLayout="row" fxLayoutAlign="space-between ">
       
         <span class="info-text">Users</span>
@@ -104,14 +89,14 @@
     
       <!-- <canvas id="myChart"  ></canvas> -->
 
-  </mat-card>
+  </div>
 
 
 
 
   <!-- according to location data -->
   <section class="location-data">
-    <mat-card class="mat-chart">
+    <div class="mat-chart">
       <span class="info-text">Locations</span>
       <div fxLayout="row" fxLayoutAlign="end">
           <button mat-button [matMenuTriggerFor]="Locations" class="button-border">
@@ -124,7 +109,7 @@
                 <button mat-menu-item> District</button>
             </mat-menu>
       </div>  
-    </mat-card>
+    </div>
   </section>
 
 </div> <!-- reporting body ends here -->

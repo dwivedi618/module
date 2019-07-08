@@ -15,7 +15,7 @@
     <mat-sidenav 
     #sidenav 
     [mode]="isLargeScreen() ? 'side' : 'over'" [opened]="isLargeScreen()"
-    class="sidenav-half-open" ><!--this class is reposible for sliding style and appearence of side navigaion-->
+    [ngClass]="[(opened) ? 'sidenav-half-open': 'sidenav-full-open']" ><!--this class is reposible for sliding style and appearence of side navigaion-->
     
 
       <!-- options inside the sidenav -->

@@ -1,28 +1,98 @@
-<div fxLayout="column" fxLayoutAlign="center center" >
-        <div class="menu" >
-                <a [routerLink]="['/reporting']" routerLinkActive="router-link-active" >
-                        <button mat-icon-button><mat-icon>dashboard</mat-icon></button>
-                        <!-- <span class="icon-name">Reporting</span> -->
-                        
-                </a>
-        </div>
-        
-        <div class="menu" >
-        
-                <button mat-icon-button><mat-icon>timeline</mat-icon></button>
-                <!-- <span class="icon-name">Timeline</span> -->
+      
+<div class="special-button-conatiner special-button-1"  fxLayoutAlign="space-arround center"
+(click)="openBottomSheet()" >
+        <button mat-icon-button >
+        <i class="material-icons add-icon">add</i>
+        <span>Create</span>
+        </button>
+</div>
 
-        </div>
-        <div class="menu" >
-        
-                <button mat-icon-button><mat-icon>email</mat-icon></button>
-                <!-- <span class="icon-name">Email</span> -->
+<div fxLayout="column" fxLayoutAlign="center " fxLayoutGap="5px" >
 
-        </div>
-        <div class="menu" >
-        
-                <button mat-icon-button><mat-icon>settings</mat-icon></button>
-                <!-- <span class="icon-name">Settings</span> -->
 
+        
+        
+              
+                        <mat-expansion-panel class="mat-expansion">
+                                        
+                                <mat-expansion-panel-header fxLayoutAlign="center center" class="mat-expansion-header">
+                                                
+                                                <mat-icon>equalizer</mat-icon>
+                                                <span class="menu-text">Dashboard</span>
+                                                
+                                </mat-expansion-panel-header>
+                                        
+                               <mat-list>
+                                       <mat-list-item>
+                                                <div class="nav-menu" >
+                                                <a [routerLink]="['/reporting']" routerLinkActive="router-link-active" >
+                                                        <button mat-icon-button><mat-icon>dashboard</mat-icon></button>
+                                                        <span class="menu-text">Reporting</span>
+                                                        
+                                                </a>
+                                        </div>
+                                         </mat-list-item>
+                                
+                                        <mat-list-item>
+                                        <div class="nav-menu" >
+                                        
+                                                <button mat-icon-button><mat-icon>timeline</mat-icon></button>
+                                                <span class="menu-text">Timeline</span>
+                                
+                                        </div>
+                                        </mat-list-item>
+
+                                        <mat-list-item>
+                                        <div class="nav-menu" >
+                                        
+                                                <button mat-icon-button><mat-icon>email</mat-icon></button>
+                                                <span class="menu-text">Email</span>
+                                
+                                        </div>
+                                        </mat-list-item>
+
+                                        <mat-list-item>
+                                        <div class="nav-menu" >
+                                        
+                                                <button mat-icon-button><mat-icon>settings</mat-icon></button>
+                                                <span class="menu-text">Settings</span>
+                                
+                                        </div>
+                                        </mat-list-item>                
+                                </mat-list>
+                                
+                        </mat-expansion-panel>
+                
+        
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>trending_up</mat-icon></button>
+                        <span class="menu-text">Trending</span>
         </div>
-</div>        
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>style</mat-icon></button>
+                        <span class="menu-text">Customize</span>
+        </div>
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>school</mat-icon></button>
+                        <span class="menu-text">Start test</span>
+        </div>
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>mail</mat-icon></button>
+                        <span class="menu-text">Mail</span>
+        </div>
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>settings</mat-icon></button>
+                        <span class="menu-text">Settings</span>
+        </div>
+
+        <div class="nav-menu">
+                        <button mat-icon-button><mat-icon>vpn_key</mat-icon></button>
+                        <span class="menu-text">Logout</span>
+        </div>
+
+</div>

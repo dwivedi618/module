@@ -32,6 +32,7 @@ import { LineChartComponent } from './reporting/line-chart/line-chart.component'
 import { DoughnutChartComponent } from './reporting/doughnut-chart/doughnut-chart.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 
@@ -51,6 +52,8 @@ const appRoutes:Routes = [
 ];
 
 @NgModule({
+  entryComponents: [UploadComponent],
+
   declarations: [
     AppComponent,
     ServiceLoginComponent,
@@ -70,7 +73,9 @@ const appRoutes:Routes = [
     LineChartComponent,
     DoughnutChartComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UploadComponent
+    
   ],
   imports: [
     BrowserModule,

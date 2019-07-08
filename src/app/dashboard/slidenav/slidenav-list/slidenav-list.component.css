@@ -1,10 +1,15 @@
 .mat-drawer-inner-container{
+
     /* background-color: #666666 !important; */
     background-color: hsl(0, 0%, 90%) !important;
     color:#ccc !important;
     /* box-shadow: 10px 10px 10px #fc0101; */
+    overflow-y: scroll;
+
 
 }
+
+
 
 .menu{
     
@@ -21,7 +26,9 @@
 }
 a{
     text-decoration: none !important;
-    
+    margin: 0;
+    padding: 0;
+
 }
 .icon-name{
     color: #666666;
@@ -52,4 +59,104 @@ a{
 
 
 
+}
+
+.nav-menu{
+  
+}
+
+div.nav-menu:hover,
+div.nav-menu:active{
+    
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+
+    
+    
+}
+
+
+div.nav-menu:visited span.menu-text
+{
+    color: black;
+    font-weight: bold;
+   
+}
+
+div.nav-menu:active span.menu-text
+{
+    color: #222222;
+    font-weight: bold;
+    transition: .2s all;
+    
+}
+.nav-menu:hover,
+.nav-menu:visited
+{
+    background-color: #e9ecef;
+    transition: .2s all;
+    
+}
+input,a,button,div:focus,
+.nav-menu:focus-within{
+    border: none;
+    outline: none;
+}
+
+.menu-text{
+    padding-left:1.2rem;
+    font-size: 14px;
+    color:  #222222;
+    font-weight:400;  
+}
+
+
+
+
+
+
+
+/* ------------------------------ */
+
+
+/* mat-expansion pannel css-------- */
+.mat-expansion{
+    box-shadow: none;
+
+}
+.mat-expansion-header{
+    padding: 0px 30px 0px 8px;
+}
+/* --------------------- */
+
+
+ 
+ /* upload button special button  */
+
+.special-button-conatiner{
+    
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+.special-button-1{
+    
+    
+    border-radius: 40px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+    width: 50%;
+    height: 3rem;
+}
+
+.special-button-1:hover{
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+
+
+}
+/* --------------------- */
+button .add-icon{
+    font-size: 2rem;
+    font-weight: 900;
 }
