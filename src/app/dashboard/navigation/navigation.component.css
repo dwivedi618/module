@@ -65,7 +65,7 @@ mat-toolbar{
   transition: .2s all;
 }
 button,mat-icon{
-  line-height: normal !importantd;
+  line-height: normal !important;
 }
 
 
