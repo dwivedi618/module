@@ -2,15 +2,19 @@
 <mat-card  class="mat-no-effect">
   <div class="background-image" fxLayoutAlign="center center">
     <img src="../assets/image/background.jpeg" alt="background">
-    <mat-icon 
-    matTooltip="upload cover"  class="upload-cover-icon" >camera_alt</mat-icon>
+    <mat-icon matTooltip="upload cover"  class="upload-cover-icon" 
+    (click)="fileUpload.click()">camera_alt</mat-icon>
   </div>
-  <div class="profile-image"  fxLayout="column" fxLayoutAlign="center center">
+  <div class="profile-image-container profile-image-container-size"  fxLayout="column" fxLayoutAlign="center center">
       <div >
           <!-- this mat-card-avatar only works wthin mat-card -->
               <img mat-card-avatar  class="avatar-big" src="../assets/image/profile.jpg" 
               alt="shivam dwivedi">
-              <mat-icon matTooltip="upload profile"class="upload-profile-icon">camera_alt</mat-icon>
+
+              <!-- fileUplaod input for profile -->
+              <mat-icon matTooltip="upload profile"class="upload-profile-icon" 
+              (click)="fileUpload.click()">camera_alt</mat-icon>
+              <input type="file" #fileUpload>
 
         </div>
 

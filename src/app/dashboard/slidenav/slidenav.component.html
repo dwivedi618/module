@@ -3,7 +3,8 @@
   <app-navigation (sidenavToggle)="sidenav.toggle();open()">
 
    </app-navigation>
-
+<mat-divider>
+</mat-divider>
 
 
 <mat-sidenav-container class="example-container">
@@ -15,12 +16,20 @@
     <mat-sidenav 
     #sidenav 
     [mode]="isLargeScreen() ? 'side' : 'over'" [opened]="isLargeScreen()"
-    [ngClass]="[(opened) ? 'sidenav-half-open': 'sidenav-full-open']" ><!--this class is reposible for sliding style and appearence of side navigaion-->
+    class="sidenav-full-open" ><!--this class is reposible for sliding style and appearence of side navigaion-->
     
 
       <!-- options inside the sidenav -->
       <app-slidenav-list></app-slidenav-list><!--this will be main option for side navigation-->
       <!--for now it is fix but dynamically option will change on every side nav option selection-->
+
+      <div class="privacy-policy">
+      <mat-divider></mat-divider>
+
+
+          <span>Privacy Policy . Terms of service</span>
+
+      </div>
 
     </mat-sidenav>
       

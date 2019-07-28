@@ -1,0 +1,67 @@
+.box{
+    color: #222;
+    font: bold;
+    font-size: 2rem;
+    width: 70vw;
+    min-height:60vh ;
+    margin: 0 auto;
+    padding: 2rem;
+}
+mat-progress-bar-fill::after {
+    background-color: #ffc107;
+}
+.action-bar{
+    box-shadow: inset 0px 0px 12px 0px #2222221f,0 0 10px 0px #00000040;
+    border-radius: 5px;
+}
+.timer{
+    
+    top: 4px;
+    
+}
+.app-name{
+    text-shadow: 0px 5px 5px black !important;
+}
+.powered-by{
+    font-size: .7rem;
+}
+span{
+    color: #ccc;
+}
+.red{
+    color: #ff781e;
+    /* font-size: 4rem; */
+    
+    
+    
+}
+.r{
+    /* font-size: 5rem; */
+    
+}
+.add{
+    font-size: 4rem;
+    text-shadow: 0px 2px 2px #222;
+    margin: .5rem;
+
+}
+.number{
+    color: #222 !important;
+    font-size: 6rem;
+    margin: 2rem;
+    text-shadow: 0px 2px 2px #222;
+    transition: .5s all;
+
+
+}
+.answer{
+    color: green;
+    font-size: 4rem;
+    text-shadow: 0px 5px 5px black;
+}
+mat-raised-button{
+    width: 50px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 3rem;
+}

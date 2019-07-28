@@ -1,0 +1,56 @@
+<mat-card fxLayout="column" fxLayoutAlign="center" class="box" fxLayoutGap="2rem">
+  <div fxLayoutAlign="center start" class="app-name">
+    <p class="powered-by">Powered By</p>
+    <span class="red">
+      RED
+
+    </span>
+        <span>AI</span>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center">
+      <!-- <button mat-button color="danger" ></button> -->
+      <button  type="submit" mat-raised-button class="btn btn-primary" (click)="randumNumber()"> START</button>
+  </div>
+
+  <div *ngIf="click">
+  <mat-progress-bar class="timer"
+  mode="indeterminate">
+</mat-progress-bar >
+  <!-- throw number for additions -->
+  <div fxLayoutAlign="center center" class="action-bar">
+    
+       
+    
+
+    <span id="number1" class="number">{{number1}}</span>
+    <span class="add">+</span>
+    <span id="number2" class="number">{{number2}}</span> 
+
+  </div>
+
+  <!-- answer -->
+  <div  fxLayout="row" fxLayoutAlign="center space-between" fxLayoutGap="2rem" >
+      <div fxLayout="column" fxLayoutAlign="center center">
+          <span>Correct Answer </span>
+          <span class="answer">{{correctAnswer}}</span>
+      </div>
+    
+      <div fxLayout="column" fxLayoutAlign="center center">
+          <span>Your Answer </span>
+          <span class="answer">{{userAnswer}}</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+          <!-- <button mat-button color="danger" ></button> -->
+          <button  type="submit" mat-raised-button class="btn btn-primary" (click)="randumNumber()">NEXT ></button>
+
+      </div>
+
+      </div>
+
+
+
+  </div>
+  
+
+
+</mat-card>

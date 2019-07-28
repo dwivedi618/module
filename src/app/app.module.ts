@@ -33,6 +33,7 @@ import { DoughnutChartComponent } from './reporting/doughnut-chart/doughnut-char
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UploadComponent } from './upload/upload.component';
+import { RandumComponent } from './randum/randum.component';
 
 
 
@@ -47,6 +48,7 @@ const appRoutes:Routes = [
   { path: 'bar-chart', component : BarChartComponent },
 
   { path : 'profile',component : ProfileComponent},
+  { path : 'randum',component : RandumComponent },
 
 
 ];
@@ -74,7 +76,8 @@ const appRoutes:Routes = [
     DoughnutChartComponent,
     LoginComponent,
     SignupComponent,
-    UploadComponent
+    UploadComponent,
+    RandumComponent
     
   ],
   imports: [

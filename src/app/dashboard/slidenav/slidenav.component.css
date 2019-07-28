@@ -37,6 +37,19 @@
   background: white;
   }
 
+  .privacy-policy{
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+
+  }
+  .privacy-policy span{
+    color: #6666;
+    font-size: .7rem;
+  }
+  .privacy-policy mat-divider{
+    width: 100%;
+  }
  
   /* mat-sidenav-closed{
 
